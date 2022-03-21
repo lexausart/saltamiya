@@ -1,0 +1,247 @@
+@import url('Saltamiya-Regular.ttf');
+
+@font-face {
+  font-family: 'Saltamiya Regular'; 
+  src: url('Saltamiya-regular.ttf');
+}
+
+body, div, span, applet, object, iframe,
+p, h1, h2, h3, h4, h5, h6 {
+    font-family: 'Saltamiya Regular';
+    src: url('Comfortaa.eot');
+    src: local('Saltamiya-regular'), 
+         local('Saltamiya-regular'), 
+         url('Saltamiya-regular.ttf') format('truetype'),
+  }
+   
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 6vw;
+}
+
+h2 {
+  font-size: 5.75vw;
+}
+
+h3 {
+  font-size: 5.5vw;
+}
+
+h4 {
+  font-size: 5.25vw;
+}
+
+p {
+  font-size: 2vw;
+}
+
+.icon {
+  width:3vw;
+  height: auto;
+  padding-bottom:10px;
+}
+
+.header {
+  text-align:center;
+}
+
+.headlogo {
+  padding: 8px;
+}
+/**
+ * RESET
+ * Reference: http://meyerweb.com/eric/tools/css/reset/
+ */
+
+ html, body, div, span, applet, object, iframe,
+ p, blockquote, pre,
+ a, abbr, acronym, address, big, cite, code,
+ del, dfn, em, img, ins, kbd, q, s, samp,
+ small, strike, strong, sub, sup, tt, var,
+ b, u, i, center,
+ dl, dt, dd, ol, ul, li,
+ fieldset, form, label, legend,
+ table, caption, tbody, tfoot, thead, tr, th, td,
+ article, aside, canvas, details, embed,
+ figure, figcaption, footer, header, hgroup,
+ main, menu, nav, output, ruby, section, summary,
+ time, mark, audio, video {
+   margin: 0;
+   border: 0;
+   vertical-align: baseline;
+ }
+ 
+ article, aside, details, figcaption, figure,
+ footer, header, hgroup, main, menu, nav, section {
+   display: block;
+ }
+ 
+ 
+ ol, ul {
+   list-style: none;
+ }
+ 
+ blockquote, q {
+   quotes: none;
+ }
+ 
+ blockquote:before, blockquote:after,
+ q:before, q:after {
+   content: '';
+   content: none;
+ }
+ 
+ table {
+   border-collapse: collapse;
+   border-spacing: 0;
+ }
+ 
+ 
+ code, pre, samp {
+   font-family: monospace;
+ }
+ 
+ /**
+  * BASIC TYPE
+  */
+ 
+ img, video {
+   max-width: 100%;
+   vertical-align: middle;
+ }
+ 
+ p:not(:last-child) {
+   margin: 0 0 1em;
+ }
+ 
+ 
+
+ hr.dotted {
+  border-top: 8px dotted pink;
+ }
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 10px 10px;
+}
+
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+  }
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #444;
+  color: white;
+}
+ 
+ /* Masonry Box */
+ 
+ html {
+   box-sizing: border-box;
+ }
+ 
+ *,
+ *:before,
+ *:after {
+   box-sizing: inherit;
+ }
+ .wrapper { 
+   max-width: 1280px;
+   margin-right: auto;
+   margin-left: auto;
+   padding: 1.5em;
+ }
+
+ .masonry-wrapper {
+   padding: 1.5em;
+   max-width: 960px;
+   margin-right: auto;
+   margin-left: auto;
+ }
+ .logo {
+  width:20%;
+  height:auto;
+}
+
+ .masonry {
+   display: grid;
+   grid-template-columns: repeat(1, minmax(100px,1fr));
+   grid-gap: 10px;
+   grid-auto-rows: 0;
+ }
+ 
+ @media only screen and (max-width: 1023px) and (min-width: 768px) {
+   .masonry {
+     grid-template-columns: repeat(2, minmax(100px,1fr));
+   }
+   .logo {
+    width:20%;
+    height:auto;
+  }
+  .header {
+    margin:auto;width:80%;
+  } 
+ }
+ @media only screen and (min-width: 1024px) {
+   .masonry {
+     grid-template-columns: repeat(3, minmax(100px,1fr));
+   }
+   .logo {
+    width:10%;
+    height:auto;
+  }
+  .header {
+    margin:auto;width:80%;
+  }
+ }
+ .masonry-item, .masonry-content {
+   border-radius: 4px;
+   overflow: hidden;
+
+ }
+
+ .masonry-item{
+  border-color:black;
+  border-style: solid;
+  border-width: thick;
+  background-color: antiquewhite;
+ }
+
+ /* Masonry Card */
+.masonry-title, .masonry-description {
+  margin: 0;
+}
+.masonry-title {
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 1rem 1.5rem;
+  text-align: center;
+}
+
+.masonry-description {
+  padding: 1.5rem;
+  font-size: .75rem;
+  border-top: 1px solid rgba(0, 0, 0, .05);
+}
+ 
